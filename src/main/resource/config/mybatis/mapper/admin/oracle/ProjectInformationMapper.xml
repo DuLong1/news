@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ischoolbar.programmer.dao.admin.ProjectDao">
+    <!-- 多表联合查询 -->
+    <!--<resultMap type="Project" id="projectMap">-->
+        <!--<id column="t_id" property="id" />-->
+        <!--<result column="t_test1" property="test1" />-->
+        <!--&lt;!&ndash;<result column="t_time" property="time" />&ndash;&gt;-->
+
+    <!--</resultMap>-->
+
+    <!-- 获取项目公开信息 -->
+    <select id="findList" parameterType="Map" resultType="Project" >
+        select * from TBDEBUG
+        <!--<if test="offset != null and pageSize != null">-->
+            <!--limit #{offset},#{pageSize}-->
+        <!--</if>-->
+    </select>
+
+</mapper>
